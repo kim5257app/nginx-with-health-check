@@ -3,7 +3,7 @@ MAINTAINER  kim5257@naver.com
 
 RUN apk update
 
-RUN apk git g++ patch pcre-dev zlib-dev make
+RUN apk add git g++ patch pcre-dev zlib-dev make
 
 COPY ./ /src/
 
