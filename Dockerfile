@@ -24,3 +24,5 @@ RUN make
 RUN make install
 
 CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
+
+EXPOSE 80
