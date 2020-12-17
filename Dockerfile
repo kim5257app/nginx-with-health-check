@@ -23,6 +23,10 @@ RUN ./configure --add-module=../nginx_upstream_check_module
 RUN make
 RUN make install
 
+COPY ./nginx.conf /usr/local/nginx/conf/nginx.conf
+RUN mkdir /usr/local/nginx/conf/conf.d
+COPY ./default.conf /usr/local/nginx/conf/conf.d/default.conf
+
 CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
 
 EXPOSE 80
