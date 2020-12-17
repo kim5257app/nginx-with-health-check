@@ -5,7 +5,7 @@ RUN apk update
 
 RUN apk add git g++ patch pcre-dev zlib-dev make
 
-COPY ./ /src/
+RUN mkdir /src
 
 WORKDIR /src
 
