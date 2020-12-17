@@ -23,4 +23,4 @@ RUN ./configure --add-module=../nginx_upstream_check_module
 RUN make
 RUN make install
 
-ENTRYPOINT ["/bin/sh", "run.sh"]
+ENTRYPOINT ["/bin/sh", "/src/run.sh"]
